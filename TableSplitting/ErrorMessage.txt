@@ -1,0 +1,4 @@
+﻿(27,6) : error 3018: Problem in mapping fragments starting at line 27:Foreign key constraint 'Itinerary_Addresses_Target' from table 
+ItineraryAddress (Address_Id) to table User (Id): The columns of table ItineraryAddress are mapped to AssociationSet Itinerary_Addresses's 
+End Itinerary_Addresses_Target but the key columns of table User are not mapped to the keys of the EntitySet Addresses corresponding to 
+this End.

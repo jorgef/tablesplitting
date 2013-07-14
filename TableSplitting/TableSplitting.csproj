@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201307130102228_Itineraries.Designer.cs">
       <DependentUpon>201307130102228_Itineraries.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201307142204181_ManyToManyRelationship.cs" />
+    <Compile Include="Migrations\201307142204181_ManyToManyRelationship.Designer.cs">
+      <DependentUpon>201307142204181_ManyToManyRelationship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedModel.Designer.cs">
@@ -84,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201307130102228_Itineraries.resx">
       <DependentUpon>201307130102228_Itineraries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201307142204181_ManyToManyRelationship.resx">
+      <DependentUpon>201307142204181_ManyToManyRelationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
