@@ -33,12 +33,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -48,21 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="DbConfig.cs" />
     <Compile Include="Itinerary.cs" />
-    <Compile Include="Migrations\201307130030197_UserAndAddress.cs" />
-    <Compile Include="Migrations\201307130030197_UserAndAddress.Designer.cs">
-      <DependentUpon>201307130030197_UserAndAddress.cs</DependentUpon>
+    <Compile Include="Migrations\201308300128388_UpgradeToEF6rc1.cs" />
+    <Compile Include="Migrations\201308300128388_UpgradeToEF6rc1.Designer.cs">
+      <DependentUpon>201308300128388_UpgradeToEF6rc1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201307130102228_Itineraries.cs" />
-    <Compile Include="Migrations\201307130102228_Itineraries.Designer.cs">
-      <DependentUpon>201307130102228_Itineraries.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201307142204181_ManyToManyRelationship.cs" />
-    <Compile Include="Migrations\201307142204181_ManyToManyRelationship.Designer.cs">
-      <DependentUpon>201307142204181_ManyToManyRelationship.cs</DependentUpon>
+    <Compile Include="Migrations\201308300133262_AddAccount.cs" />
+    <Compile Include="Migrations\201308300133262_AddAccount.Designer.cs">
+      <DependentUpon>201308300133262_AddAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,22 +74,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
     <EntityDeploy Include="SavedModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SavedModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201307130030197_UserAndAddress.resx">
-      <DependentUpon>201307130030197_UserAndAddress.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201308300128388_UpgradeToEF6rc1.resx">
+      <DependentUpon>201308300128388_UpgradeToEF6rc1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201307130102228_Itineraries.resx">
-      <DependentUpon>201307130102228_Itineraries.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201307142204181_ManyToManyRelationship.resx">
-      <DependentUpon>201307142204181_ManyToManyRelationship.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201308300133262_AddAccount.resx">
+      <DependentUpon>201308300133262_AddAccount.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

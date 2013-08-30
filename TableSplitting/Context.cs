@@ -4,6 +4,7 @@ namespace TableSplitting
 {
     public class Context : DbContext
     {
+        public IDbSet<Account> Account { get; set; }
         public IDbSet<User> Users { get; set; }
         public IDbSet<Address> Addresses { get; set; }
         public IDbSet<Itinerary> Itineraries { get; set; }
